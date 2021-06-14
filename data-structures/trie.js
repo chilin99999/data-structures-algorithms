@@ -17,10 +17,10 @@ class Trie {
     current.isEnd = true;
   }
 
-  find(inputStr) {
+  find(str) {
     let current = this.root;
 
-    for (const word of inputStr) {
+    for (const word of str) {
       if (current.children[word]) {
         current = current.children[word];
       } else {
@@ -31,9 +31,9 @@ class Trie {
     return this.getWords(current);
   }
 
-  has(inputStr) {
+  has(str) {
     let current = this.root;
-    for (const word of inputStr) {
+    for (const word of str) {
       if (current.children[word]) {
         current = current.children[word];
       } else {
@@ -43,9 +43,9 @@ class Trie {
     return current.isEnd;
   }
 
-  remove(inputStr) {
+  remove(str) {
     let current = this.root;
-    for (const word of inputStr) {
+    for (const word of str) {
       if (current.children[word]) {
         current = current.children[word];
       } else {
@@ -59,6 +59,7 @@ class Trie {
       delete parent.children[current.value];
       current = parent;
     }
+    return true;
   }
 
   getWords(current) {
