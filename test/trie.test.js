@@ -52,5 +52,11 @@ describe('Trie', () => {
     assert.deepStrictEqual(trie.has('category'), true);
     assert.deepStrictEqual(trie.has('catch'), false);
     assert.deepStrictEqual(trie.has('catchplay'), false);
+
+    trie.remove('category');
+    assert.deepStrictEqual(trie.has('cat'), true);
+    assert.deepStrictEqual(trie.has('category'), false);
+    assert.deepStrictEqual(trie.has('catch'), false);
+    assert.deepStrictEqual(trie.has('catchplay'), false);
   });
 });

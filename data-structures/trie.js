@@ -54,7 +54,11 @@ class Trie {
     }
 
     current.isEnd = false;
-    while (current != this.root && Object.keys(current.children).length == 0) {
+    while (
+      current != this.root &&
+      !current.isEnd &&
+      Object.keys(current.children).length == 0
+    ) {
       const parent = current.parent;
       delete parent.children[current.value];
       current = parent;
