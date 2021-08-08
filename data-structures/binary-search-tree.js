@@ -10,10 +10,8 @@
  * 1.
  *
  * Big O
- * Insertion: O(1)
- * Removal: O(1)
- * Searching: O(n)
- * Access: O(n)
+ * Insertion: O(log n)
+ * Searching: O(log n)
  */
 
 class BinarySearchTree {
@@ -43,6 +41,21 @@ class BinarySearchTree {
       }
       current = current[side];
     }
+  }
+
+  contains(value) {
+    let current = this.root;
+    while (current) {
+      if (!current) {
+        return false;
+      }
+      if (current.value === value) {
+        return true;
+      }
+      const side = value < current.value ? 'left' : 'right';
+      current = current[side];
+    }
+    return false;
   }
 }
 
