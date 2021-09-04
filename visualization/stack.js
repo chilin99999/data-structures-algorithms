@@ -1,7 +1,6 @@
 // hedietDbgVis.createGraphFromPointers(
 //   hedietDbgVis.tryEval([
 //     'stack.top',
-//     'node',
 //     // 'node',
 //     // 'this.top',
 //   ]),

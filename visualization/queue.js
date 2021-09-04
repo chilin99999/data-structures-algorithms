@@ -2,7 +2,6 @@
 //   hedietDbgVis.tryEval([
 //     'queue.first',
 //     'queue.last',
-//     'node',
 //     // 'node',
 //     // 'this.first',
 //     // 'this.last',
