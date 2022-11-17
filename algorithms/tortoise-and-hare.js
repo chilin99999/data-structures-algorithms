@@ -9,6 +9,15 @@
 // )
 
 // Floyd判圈算法(Floyd Cycle Detection Algorithm)，又稱龜兔賽跑算法(Tortoise and Hare Algorithm)
+//
+// 找出是否有Cycle：
+// 兔子走兩步，烏龜走一步，只要有相遇，就是有Cycle
+// 如果兔子走到盡頭，就代表沒有Cycle
+//
+// 找出Cycle的頭：
+// 1. 驗證是否有Cycle的步驟：兔子走兩步，烏龜走一步，相遇
+// 2. 烏龜回原點，兔子留在原地，一人走一步，相遇的點即是Cycle的頭
+
 class LinkedList {
   constructor() {
     this.head = null;
